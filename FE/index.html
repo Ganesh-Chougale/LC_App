@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💞Love Calculator💔</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💞Love Calculator💔</h1>
+        <form id="loveForm">
+            <input type="text" id="userName" placeholder="Your Name" required>
+            <input type="text" id="partnerName" placeholder="Partner's Name" required>
+            <input type="submit" value="Calculate" id="submitBtn">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loveForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            calculateLove(); // Call function to calculate love bond
+        });
+
+        function calculateLove() {
+            var userName = document.getElementById('userName').value;
+            var partnerName = document.getElementById('partnerName').value;
+
+            // Regular expression to match only alphabetic characters
+            var alphaRegex = /^[a-zA-Z]+$/;
+
+            // Validate input for user name
+            if (!userName.match(alphaRegex)) {
+                alert("Please enter a valid name for yourself.");
+                return;
+            }
+
+            // Validate input for partner name
+            if (!partnerName.match(alphaRegex)) {
+                alert("Please enter a valid name for your partner.");
+                return;
+            }
+
+            // Simulate generating a random percentage between 50 and 100
+            var lovePercentage = Math.floor(Math.random() * (100 - 50 + 1)) + 50;
+
+            // Display the result
+            alert("Your love bond with " + partnerName + " is " + lovePercentage + "%.\n(Full names can give you more accurate result)");
+            
+            // Hide the submit button after the first attempt
+            document.getElementById('submitBtn').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
