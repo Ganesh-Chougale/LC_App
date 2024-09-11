@@ -5,6 +5,9 @@ function Female() {
   const [mName, setMname] = useState("");
   const [fName, setFname] = useState("");
 
+  const randomNumber = Math.floor(Math.random() * 11) + 20;
+  const score = ((mName.length + fName.length)*2)+randomNumber;
+
   const handleMale = (e)=>{
     setMname(e.target.value);
   }
@@ -13,8 +16,8 @@ function Female() {
   }
 
   const handleClick = (e)=>{
-    e.preventDefault();
-    alert(`${mName} ${fName}`);
+    // e.preventDefault();
+    alert(`${fName} have ${score}% more chances to stick together with ${mName}`);
   }
 
   return (
@@ -38,6 +41,7 @@ function Female() {
         >Love Score</button>
     </div>
     </form>
+
     </div>
   )
 }
