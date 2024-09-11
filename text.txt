@@ -1,5 +1,0 @@
- i want to create a web application
-
-where people will type the name on first input, their friend's name of second input. & it will calculate their friendship bond in percentage (this percentage will be randomly generated but above 50%).
-
-but i will get the name of person, name of friend & percentage on my email

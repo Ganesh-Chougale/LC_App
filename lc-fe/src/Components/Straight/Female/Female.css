@@ -1,0 +1,12 @@
+.femaleMain{
+    display: flex;
+}
+.fcd{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin-bottom: 10px;
+}
+input::placeholder {
+    text-align: center; 
+ }
