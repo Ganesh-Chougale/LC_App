@@ -8,7 +8,6 @@ loveCalculator_Front_End/
                └── 
 
 
-
 ```bash
 git add .
 git commit -m "message"
